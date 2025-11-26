@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17759439000"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17759439000');
+</script>
+
+
+  
+
+
+
+
+  
+<link rel="stylesheet" href="style.css">
+
+
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Naveed Electrician — Dammam (Professional Electrical Services)</title>
+  <meta name="description" content="Naveed Electrician - 24/7 electrical services in Dammam. Wiring, breaker repair, lighting, AC wiring. WhatsApp +966576482012" />
+  <link rel="icon" href="images/naveedlogo.png">
+
+  <style>
+    :root{
+      --bg:#0b2140;      /* dark blue */
+      --accent:#ffcc00;  /* electric yellow */
+      --muted:#6e7b88;
+      --card:#ffffff;
+      --wh:#25D366;
+      --gap:18px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, Poppins, Arial, sans-serif;background:#f4f6f8;color:#112;line-height:1.5}
+    a{color:inherit}
+    img{max-width:100%;display:block}
+
+    /* ========== Top header (fixed structure) ========== */
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 20px;background:var(--card);
+      box-shadow:0 6px 18px rgba(2,8,23,0.06);
+      position:sticky;top:0;z-index:1200;
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{height:56px;border-radius:8px}
+    .brand .title{font-size:18px;font-weight:700;color:var(--bg);line-height:1}
+    .brand .sub{font-size:12px;color:var(--muted)}
+    .top-actions{display:flex;gap:12px;align-items:center}
+    .btn{padding:10px 14px;border-radius:8px;font-weight:700;text-decoration:none}
+    .btn-primary{background:var(--accent);color:#072033}
+    .btn-wh{background:var(--wh);color:#072033;display:flex;gap:8px;align-items:center}
+
+    /* ========== HERO (clean, centered) ========== */
+    .hero{
+      position:relative;
+      display:flex;align-items:center;justify-content:center;
+      min-height:420px;text-align:center;color:#fff;
+      overflow:hidden;
+    }
+    .hero .bg{
+      position:absolute;inset:0;background-position:center;background-size:cover;
+      filter:brightness(.45);
+      /* uploaded hero image path (local) */
+      background-image: url('/mnt/data/A_website_screenshot_for_Naveed_Electrician_showca.png'), url('images/work1.png');
+    }
+    .hero .wrap{position:relative;z-index:2;max-width:1100px;padding:28px}
+    .hero h1{margin:0;font-size:34px;line-height:1.05}
+    .hero p{margin:12px 0 18px;color:rgba(255,255,255,0.95);font-size:17px}
+    .hero .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+    /* ========== CONTENT LAYOUT ========== */
+    .container{max-width:1100px;margin:28px auto;padding:0 20px}
+    .section{margin-bottom:28px}
+    h2{font-size:26px;margin-bottom:14px;color:var(--bg)}
+
+    .grid{display:grid;gap:var(--gap)}
+    .services{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(3,12,30,0.04)}
+    .service-box{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+    .service-icon{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ffe88f);display:flex;align-items:center;justify-content:center;font-weight:800}
+
+    /* slider */
+    .work-slider{position:relative;border-radius:12px;overflow:hidden}
+    .work-slide{display:none}
+    .work-slide.active{display:block}
+    .work-slide img{width:100%;height:420px;object-fit:cover}
+    .dots{display:flex;gap:8px;justify-content:center;margin-top:12px}
+    .dot{width:10px;height:10px;border-radius:50%;background:#d5dde6;cursor:pointer}
+    .dot.active{background:var(--accent)}
+
+    /* before/after */
+    .ba-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:center}
+    .ba{position:relative;max-width:720px;border-radius:12px;overflow:hidden}
+    .ba img{display:block;width:100%;height:360px;object-fit:cover}
+    .ba .after{position:absolute;inset:0;width:50%;overflow:hidden}
+    .ba .handle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(255,255,255,0.95);padding:8px;border-radius:999px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,0.12)}
+
+    /* reviews carousel (horizontal) */
+    .reviews{display:flex;gap:12px;overflow:hidden;padding:6px 4px}
+
+    /* contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 380px;gap:18px;align-items:start}
+    @media(max-width:980px){.contact-grid{grid-template-columns:1fr}}
+    .form input,.form textarea{width:100%;padding:12px;margin-top:8px;border-radius:8px;border:1px solid #d9e6f5}
+    .form button{background:var(--bg);color:white;padding:12px;border-radius:8px;border:0;font-weight:700;margin-top:12px;width:100%}
+
+    /* footer */
+    footer{background:var(--bg);color:#fff;padding:28px;text-align:center;margin-top:30px}
+
+    /* floating */
+    .float-wh{position:fixed;right:16px;bottom:16px;background:var(--wh);padding:14px;border-radius:50%;box-shadow:0 10px 28px rgba(0,0,0,0.18);z-index:999;color:#072033;text-decoration:none;font-size:20px}
+    .float-call{position:fixed;right:16px;bottom:86px;background:var(--bg);padding:12px;border-radius:50%;box-shadow:0 10px 28px rgba(0,0,0,0.12);z-index:999;color:white;text-decoration:none;font-size:18px}
+
+    /* small screens adjustments */
+    @media(max-width:760px){
+      .hero{min-height:280px}.hero h1{font-size:22px}.hero p{font-size:14px}
+      .work-slide img{height:220px}.ba img{height:200px}
+      .brand img{height:46px}
+    }
+  </style>
+</head>
+<body>
+
+
+  
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="brand" aria-hidden>
+      <img src="images/naveedlogo.png" alt="Naveed logo">
+      <div>
+        <div class="title">Naveed Electrician</div>
+        <div class="sub">Dammam • Eastern Province</div>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <a class="btn btn-primary" href="#contact">Book Service</a>
+      <a class="btn btn-wh" href="https://wa.me/966576482012" target="_blank">WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" role="banner" aria-label="Hero">
+    <div class="bg" aria-hidden></div>
+    <div class="wrap">
+      <div class="ctas">
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="container" id="top">
+
+    <!-- SERVICES -->
+    <section class="section">
+      <h2>Our Services</h2>
+      <div class="grid services">
+        <div class="card service-box">
+          <div class="service-icon">⚡</div>
+          <strong>House Wiring</strong>
+          <p class="muted">New wiring, rewiring, safety certificates & testing.</p>
+        </div>
+        <div class="card service-box">
+          <div class="service-icon">🔧</div>
+          <strong>Breaker & DB</strong>
+          <p class="muted">DB setup, breaker replacement, load balancing and testing.</p>
+        </div>
+        <div class="card service-box">
+          <div class="service-icon">💡</div>
+          <strong>Lighting</strong>
+          <p class="muted">LEDs, chandeliers, outdoor & emergency lighting installations.</p>
+        </div>
+        <div class="card service-box">
+          <div class="service-icon">🔌</div>
+          <strong>Appliances & Heavy Load</strong>
+          <p class="muted">Dedicated circuits for AC, ovens, water heaters.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section">
+      <div class="grid stats" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+        <div class="card stat"><div style="font-size:22px;font-weight:800">10+</div><div style="color:var(--muted)">Years Experience</div></div>
+        <div class="card stat"><div style="font-size:22px;font-weight:800">2500+</div><div style="color:var(--muted)">Jobs Completed</div></div>
+        <div class="card stat"><div style="font-size:22px;font-weight:800">4.9★</div><div style="color:var(--muted)">Average Rating</div></div>
+      </div>
+    </section>
+
+    <!-- WORK SLIDER -->
+    <section class="section">
+      <h2>Recent Projects</h2>
+      <div class="work-slider card" id="workSlider">
+        <div class="work-slide active"><img src="images/work1.png" alt="Project 1"></div>
+        <div class="work-slide"><img src="images/work2.png" alt="Project 2"></div>
+        <div class="work-slide"><img src="images/work3.png" alt="Project 3"></div>
+      </div>
+      <div class="dots" id="dots"></div>
+    </section>
+
+    <!-- BEFORE / AFTER -->
+    <section class="section">
+      <h2>Before & After</h2>
+      <div class="ba-row">
+        <div class="ba" id="ba">
+          <img src="images/work2.png" alt="Before">
+          <div class="after"><img src="images/work3.png" alt="After"></div>
+          <div class="handle">⇄</div>
+        </div>
+        <div style="max-width:420px;text-align:left">
+          <h3>How it works</h3>
+          <p>Drag the handle to compare before and after. We deliver tidy, safe and code-compliant installations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section">
+      <h2>Customer Reviews</h2>
+      <div class="reviews" id="reviews">
+        <div class="review card"><strong>Ahmed</strong><p>Very fast & honest. Fixed my short circuit quickly.</p></div>
+        <div class="review card"><strong>Salman</strong><p>Professional, clean work. Recommended.</p></div>
+        <div class="review card"><strong>Faisal</strong><p>Good price and on-time service.</p></div>
+      </div>
+    </section>
+
+    <!-- CONTACT + BOOK -->
+    <section class="section" id="contact">
+      <h2>Book a Service</h2>
+      <div class="contact-grid">
+        <div>
+          <div class="card">
+            <h3>Emergency? Call now</h3>
+            <p><a href="tel:+966576482012">+966 57 648 2012</a> • WhatsApp: <a href="https://wa.me/966576482012">Message</a></p>
+            <p>We aim to respond within 1 hour for urgent requests in Dammam area.</p>
+          </div>
+        </div>
+
+        <aside>
+          <form action="https://formsubmit.co/naveedelectrician2@gmail.com" method="POST" class="card form">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <label style="font-weight:700">Name</label>
+            <input type="text" name="name" required>
+
+            <label style="font-weight:700">Phone</label>
+            <input type="text" name="phone" required>
+
+            <label style="font-weight:700">Service Required</label>
+            <input type="text" name="service" placeholder="Wiring, Breaker, Lighting..." required>
+
+            <label style="font-weight:700">Address / Location</label>
+            <input type="text" name="location" placeholder="Dammam, Khobar..." required>
+
+            <label style="font-weight:700">Notes</label>
+            <textarea name="message" rows="3" placeholder="Details..."></textarea>
+
+            <button type="submit">Send Request</button>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="section">
+      <h2>Our Location</h2>
+      <div class="card">
+        <iframe src="https://www.google.com/maps?q=Dammam,+Saudi+Arabia&output=embed" loading="lazy" style="border:0;width:100%;height:320px;border-radius:10px"></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FLOATING ACTIONS -->
+  <a class="float-call" href="tel:+966576482012">📞</a>
+  <a class="float-wh" href="https://wa.me/966576482012" target="_blank">💬</a>
+
+  <!-- FOOTER -->
+  <footer>
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="font-weight:800">Naveed Electrician — Dammam</div>
+      <div style="margin-top:8px">Phone: <a href="tel:+966576482012" style="color:#fff;text-decoration:underline">+966 57 648 2012</a> • Email: <a href="mailto:naveedelectrician2@gmail.com" style="color:#fff;text-decoration:underline">naveedelectrician2@gmail.com</a></div>
+      <div style="margin-top:10px; font-size:13px; color:#cfe4ff">© 2025 Naveed Electrician</div>
+    </div>
+  </footer>
+
+<script>
+/* ====== slider (auto + dots) ====== */
+(function(){
+  const slides = Array.from(document.querySelectorAll('.work-slide'));
+  const dotsWrap = document.getElementById('dots');
+  let index = 0, timer;
+
+  function buildDots(){
+    dotsWrap.innerHTML = '';
+    slides.forEach((s,i)=>{
+      const d = document.createElement('div'); d.className='dot'; if(i===0) d.classList.add('active');
+      d.addEventListener('click', ()=>show(i));
+      dotsWrap.appendChild(d);
+    });
+  }
+  function show(n){
+    slides.forEach(s=>s.classList.remove('active'));
+    slides[n].classList.add('active');
+    Array.from(dotsWrap.children).forEach(el=>el.classList.remove('active'));
+    dotsWrap.children[n].classList.add('active');
+    index = n;
+  }
+  function autoplay(){
+    index = (index + 1) % slides.length;
+    show(index);
+    timer = setTimeout(autoplay, 3500);
+  }
+  if(slides.length){
+    buildDots();
+    autoplay();
+  }
+})();
+
+/* ====== before/after handle ====== */
+(function(){
+  const ba = document.getElementById('ba');
+  if(!ba) return;
+  const after = ba.querySelector('.after'), handle = ba.querySelector('.handle');
+  function setPos(pct){ after.style.width = pct + '%'; handle.style.left = pct + '%'; }
+  setPos(50);
+  let dragging=false;
+  handle.addEventListener('mousedown', ()=>dragging=true);
+  window.addEventListener('mouseup', ()=>dragging=false);
+  window.addEventListener('mousemove', e=>{ if(!dragging) return; const rect=ba.getBoundingClientRect(); let pct = ((e.clientX-rect.left)/rect.width)*100; if(pct<5) pct=5; if(pct>95) pct=95; setPos(pct);});
+  // touch
+  handle.addEventListener('touchstart', ()=>dragging=true);
+  window.addEventListener('touchend', ()=>dragging=false);
+  window.addEventListener('touchmove', e=>{ if(!dragging) return; const rect=ba.getBoundingClientRect(); let pct = ((e.touches[0].clientX-rect.left)/rect.width)*100; if(pct<5) pct=5; if(pct>95) pct=95; setPos(pct);});
+})();
+
+/* ====== reviews auto scroll simple ====== */
+(function(){
+  const strip = document.getElementById('reviews');
+  if(!strip) return;
+  let pos = 0;
+  function step(){
+    pos = (pos + 1) % strip.children.length;
+    const w = strip.children[0].offsetWidth + 12;
+    strip.scrollTo({left: pos * w, behavior:'smooth'});
+    setTimeout(step, 4000);
+  }
+  setTimeout(step, 2000);
+})();
+</script>
+
+</body>
+</html>
